@@ -1,0 +1,8 @@
+# Every PR automatically requests review from the owners of the changed files.
+# Replace @TetraNex/developers with your GitHub team slug (Org -> Teams).
+# Add individual @usernames per area once all four GitHub usernames are known.
+
+*                       @TetraNex/developers
+/.github/               @TetraNex/maintainers
+/scripts/               @TetraNex/maintainers
+/docs/                  @TetraNex/developers

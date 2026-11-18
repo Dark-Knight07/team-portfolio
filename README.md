@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TetraNex Technologies — Company Website
 
-## Getting Started
+> **Four Minds. One Secure Future.**
+> Development · Cloud · Automation · Cybersecurity · Deployment
 
-First, run the development server:
+Marketing website for TetraNex Technologies, a remote-first engineering team.
+Built with **Next.js (App Router)**, **React**, **TypeScript** and **Tailwind CSS**.
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/TetraNex/<repo-name>.git
+cd <repo-name>
+npm install
+cp .env.example .env.local     # then edit values
+npm run dev -- -p 3100         # http://localhost:3100
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command             | What it does                                   |
+| ------------------- | ---------------------------------------------- |
+| `npm run dev`       | Start the development server                   |
+| `npm run lint`      | ESLint                                         |
+| `npm run typecheck` | TypeScript type check                          |
+| `npm run build`     | Production build                               |
+| `npm run check`     | Lint + typecheck + build (run before every PR) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+.
+├── app/                 Next.js routes, layout, global styles
+│   └── blog/            Blog index and article pages
+├── components/          React UI components (one file per section)
+├── lib/                 Content and configuration (edit these, not components)
+│   ├── site.ts          Brand name, tagline, contact details
+│   ├── team.ts          Team members
+│   └── content.ts       Services, projects, blog posts, FAQ
+├── public/              Static assets (team photos in public/team)
+├── docs/                Team documentation (start with GITHUB_WORKFLOW.md)
+├── scripts/             Admin scripts (GitHub setup)
+└── .github/             PR/issue templates, CODEOWNERS, Actions workflows
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All work goes through Pull Requests into `develop`. Read
+[`docs/GITHUB_WORKFLOW.md`](docs/GITHUB_WORKFLOW.md) and
+[`CONTRIBUTING.md`](CONTRIBUTING.md) before your first change.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Proprietary. See [`LICENSE`](LICENSE).
