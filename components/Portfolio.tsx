@@ -97,7 +97,7 @@ export function Portfolio() {
                           <div className="mono text-[10px] text-ink-3 tracking-[0.06em] mb-1">ROLE</div>
                           <div className="text-[13px] text-ink-2">{p.role}</div>
                         </div>
-                        <div className="ml-auto">
+                        <div className="md:ml-auto">
                           <div className="mono text-[10px] text-ink-3 tracking-[0.06em] mb-1">STACK</div>
                           <div className="text-[13px] text-ink-2">{p.stack}</div>
                         </div>

@@ -32,8 +32,8 @@ export function Team() {
     <section id="team" className="py-[var(--pad-section)] relative">
       <div className="container">
         <SectionHeader index="05" label="Team" kicker="Remote-first engineers" title="Meet our team." text={teamIntro} />
-        <div className="grid grid-cols-1 gap-6 md:gap-8 md:[grid-template-columns:minmax(280px,360px)_1fr]">
-          <div className="flex md:flex-col gap-1.5 overflow-x-auto md:overflow-visible pb-1 md:pb-0 -mx-1 px-1" role="tablist" aria-label="Team members">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:gap-8 md:[grid-template-columns:minmax(280px,360px)_minmax(0,1fr)]">
+          <div className="min-w-0 flex md:flex-col gap-1.5 overflow-x-auto md:overflow-visible pb-1 md:pb-0 -mx-1 px-1" role="tablist" aria-label="Team members">
             {team.map((t, idx) => (
               <button
                 key={t.slug}
@@ -53,7 +53,7 @@ export function Team() {
             ))}
           </div>
 
-          <div className="border border-line rounded-[var(--radius)] overflow-hidden bg-bg-2" key={m.slug}>
+          <div className="min-w-0 border border-line rounded-[var(--radius)] overflow-hidden bg-bg-2" key={m.slug}>
             <div className="p-6 md:p-8 pb-6 border-b border-line" style={{ background: "linear-gradient(135deg, #d4ff3a10, transparent)" }}>
               <div className="flex items-start gap-5 mb-6">
                 <Avatar m={m} size="lg" />
