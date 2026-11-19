@@ -20,11 +20,15 @@ export const site = {
   socials: [] as { label: string; href: string }[], // e.g. { label: "LinkedIn", href: "https://…" }
 };
 
-export const contactHref = site.email ? `mailto:${site.email}` : "/#contact";
+/** Primary conversion targets (sections on the home page). */
+export const startHref = "/#start";
+export const consultHref = "/#consultation";
+export const contactHref = startHref;
 
 export const nav = [
   { label: "Work", href: "/#portfolio" },
   { label: "Services", href: "/#services" },
+  { label: "Technology", href: "/#technology" },
   { label: "Team", href: "/#team" },
   { label: "Blog", href: "/#blog" },
   { label: "FAQ", href: "/#faq" },

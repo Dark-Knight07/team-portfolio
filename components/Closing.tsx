@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { faqs } from "@/lib/content";
-import { team } from "@/lib/team";
-import { site, contactHref } from "@/lib/site";
+import { site, startHref, consultHref } from "@/lib/site";
 import { ServiceArt } from "./ServiceArt";
 import { LogoMark } from "./Logo";
+import { CookieSettingsLink } from "./Analytics";
 import { ArrowRight, SectionHeader, btnGhost, btnPrimary } from "./ui";
 
 export function Faq() {
   return (
     <section id="faq" className="py-[var(--pad-section)] relative">
       <div className="container">
-        <SectionHeader index="06" label="FAQ" kicker="Good questions" title="Questions, answered." />
+        <SectionHeader index="08" label="FAQ" kicker="Good questions" title="Questions, answered." />
         <div className="max-w-[820px] border-t border-line">
           {faqs.map((f) => (
             <details key={f.q} className="reveal group border-b border-line py-5">
@@ -44,23 +44,15 @@ export function Cta() {
           Tell us what you&apos;re trying to make or fix. You&apos;ll hear back from the engineers who would actually do the work.
         </p>
         <div className="reveal flex flex-wrap justify-center gap-3">
-          <a className={`${btnPrimary} h-13 px-7 text-[16px]`} href={contactHref}>
+          <a className={`${btnPrimary} h-13 px-7 text-[16px]`} href={startHref}>
             Start a project <ArrowRight />
           </a>
-          <a className={`${btnGhost} h-13 px-7 text-[16px] backdrop-blur-sm`} href={contactHref}>
-            Book intro call
+          <a className={`${btnGhost} h-13 px-7 text-[16px] backdrop-blur-sm`} href={consultHref}>
+            Book a consultation
           </a>
         </div>
         {site.email && <p className="reveal mono text-[12px] text-ink-3 tracking-[0.06em] mt-8">{site.email}</p>}
-        <div className="reveal mt-14 mx-auto max-w-[920px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
-          {team.filter((m) => m.phone).map((m) => (
-            <a key={m.slug} href={`tel:${m.phone}`} className="group rounded-[var(--radius-sm)] border border-line-2 bg-bg-2/70 backdrop-blur-sm px-4 py-3.5 hover:border-line-3 hover:bg-bg-3 transition-colors">
-              <div className="text-[14px] font-medium tracking-[-0.005em]">{m.name}</div>
-              <div className="text-[12px] text-ink-3 mb-2">{m.title}</div>
-              <div className="mono text-[12px] text-accent tracking-[0.04em]">{m.phone}</div>
-            </a>
-          ))}
-        </div>
+
       </div>
     </section>
   );
@@ -68,9 +60,9 @@ export function Cta() {
 
 export function Footer() {
   const cols = [
-    { h: "Team", links: [["Work", "/#portfolio"], ["Services", "/#services"], ["Process", "/#process"], ["Team", "/#team"], ["Blog", "/blog"]] },
+    { h: "Team", links: [["Work", "/#portfolio"], ["Services", "/#services"], ["Process", "/#process"], ["Technology", "/#technology"], ["Team", "/#team"], ["Blog", "/blog"]] },
     { h: "Expertise", links: [["Cloud & AWS", "/#services"], ["Identity & Access", "/#services"], ["Microsoft 365", "/#services"], ["AI & Automation", "/#services"]] },
-    { h: "Company", links: [["Contact", contactHref], ["FAQ", "/#faq"], ...site.socials.map((s) => [s.label, s.href])] },
+    { h: "Company", links: [["Contact", startHref], ["FAQ", "/#faq"], ["Privacy", "/privacy"], ...site.socials.map((s) => [s.label, s.href])] },
   ];
   return (
     <footer className="border-t border-line pt-20 pb-10 relative overflow-hidden">
@@ -112,6 +104,7 @@ export function Footer() {
         </div>
         <div className="flex justify-between items-center pt-8 border-t border-line flex-wrap gap-4">
           <span className="mono text-[11px] text-ink-3 tracking-[0.06em] uppercase">© {new Date().getFullYear()} {site.legalName}</span>
+          <CookieSettingsLink className="mono text-[11px] text-ink-3 tracking-[0.06em] hover:text-ink-2 transition-colors uppercase" />
           <Link href="/#top" className="mono text-[11px] text-ink-3 tracking-[0.06em] hover:text-ink-2 transition-colors uppercase">Back to top ↑</Link>
         </div>
       </div>

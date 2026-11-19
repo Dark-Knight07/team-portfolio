@@ -27,7 +27,7 @@ export function Blog() {
   return (
     <section id="blog" className="py-[var(--pad-section)] relative">
       <div className="container">
-        <SectionHeader index="04" label="Blog" kicker="From the blog" title="Latest from the blog." text="Notes on cloud, identity, Microsoft 365, AI and automation from the engineers doing the work." />
+        <SectionHeader index="05" label="Blog" kicker="From the blog" title="Latest from the blog." text="Notes on cloud, identity, Microsoft 365, AI and automation from the engineers doing the work." />
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {posts.slice(0, 3).map((p) => (
             <PostCard key={p.slug} p={p} />

@@ -28,111 +28,9 @@ export const stack = [
   "Next.js", "React", "TypeScript", "Python", "PowerShell", "Docker", "Kubernetes",
 ];
 
-/* ---------- Portfolio (sourced from public GitHub repositories) ---------- */
-export type Project = {
-  slug: string; title: string; category: string; year: string; description: string;
-  metricLabel: string; metric: string; role: string; stack: string; image?: string; hue?: number; featured?: boolean; href?: string;
-};
-export const projectFilters = ["All", "Cloud", "AI", "DevOps", "Web"];
-export const projects: Project[] = [
-  {
-    "slug": "it-support-agents",
-    "title": "IT Support Agents",
-    "category": "AI",
-    "year": "2026",
-    "description": "An autonomous multi-agent IT support platform simulation, where AI agents triage and work support requests.",
-    "metricLabel": "Status",
-    "metric": "Live demo",
-    "role": "Design & development, MD Owais",
-    "stack": "TypeScript · Multi-agent AI",
-    "href": "https://it-support-agent-indol.vercel.app",
-    "featured": true
-  },
-  {
-    "slug": "ci-cd-command-center",
-    "title": "CI/CD Command Center",
-    "category": "DevOps",
-    "year": "2026",
-    "description": "An interactive 3D showcase of a full delivery pipeline: Code, Build, Test, Security Scan, Deploy, Cloud and Monitor.",
-    "metricLabel": "Status",
-    "metric": "Live demo",
-    "role": "Design & development, MD Owais",
-    "stack": "Next.js · React Three Fiber · GSAP",
-    "href": "https://ci-cd-command-center.vercel.app"
-  },
-  {
-    "slug": "tierdrift",
-    "title": "TierDrift",
-    "category": "Cloud",
-    "year": "2026",
-    "description": "An interactive 3D lab where you watch cloud architecture evolve, from a single fragile server to a fully resilient N-tier system, live in the browser.",
-    "metricLabel": "Status",
-    "metric": "Live demo",
-    "role": "Design & development, MD Owais",
-    "stack": "TypeScript · 3D · Cloud architecture",
-    "href": "https://tier-drift.vercel.app"
-  },
-  {
-    "slug": "cloud-playground",
-    "title": "Cloud Playground",
-    "category": "Cloud",
-    "year": "2026",
-    "description": "An interactive AWS learning platform where users visually build cloud infrastructure.",
-    "metricLabel": "Status",
-    "metric": "Live demo",
-    "role": "Design & development, MD Owais",
-    "stack": "HTML · AWS concepts",
-    "href": "https://cloud-playground-beta.vercel.app"
-  },
-  {
-    "slug": "ai-job-agent",
-    "title": "AI Job Outreach Agent",
-    "category": "AI",
-    "year": "2026",
-    "description": "An autonomous AI job-outreach agent that works through a Telegram bot, Groq AI and Gmail.",
-    "metricLabel": "Status",
-    "metric": "Source on GitHub",
-    "role": "Design & development, MD Owais",
-    "stack": "Python · Telegram Bot · Groq AI · Gmail",
-    "href": "https://github.com/Dark-Knight07/ai-job-agent"
-  },
-  {
-    "slug": "infraverse",
-    "title": "InfraVerse",
-    "category": "Cloud",
-    "year": "2026",
-    "description": "An interactive universe of infrastructure, cloud and operations.",
-    "metricLabel": "Status",
-    "metric": "Source on GitHub",
-    "role": "Design & development, MD Owais",
-    "stack": "HTML · Interactive visualisation",
-    "href": "https://github.com/Dark-Knight07/InfraVerse"
-  },
-  {
-    "slug": "careerforge-ai",
-    "title": "CareerForge AI",
-    "category": "AI",
-    "year": "2026",
-    "description": "An AI-powered job automation platform that streamlines job searching, application tracking and personalised career opportunities.",
-    "metricLabel": "Status",
-    "metric": "In development",
-    "role": "Design & development, MD Owais",
-    "stack": "Python · AI automation",
-    "href": "https://github.com/Dark-Knight07/Careerforge-AI"
-  },
-  {
-    "slug": "gamehub-arcade",
-    "title": "GameHub Arcade",
-    "category": "Web",
-    "year": "2026",
-    "description": "A browser gaming platform with 14 original HTML5 games you can play instantly or download for offline play.",
-    "metricLabel": "Status",
-    "metric": "Live demo",
-    "role": "Design & development, MD Owais",
-    "stack": "Next.js · TypeScript · Tailwind CSS",
-    "href": "https://gamehub-arcade-rho.vercel.app"
-  }
-];
+/* ---------- Portfolio: see lib/projects.ts ---------- */
+export { projects, projectFilters, getProject } from "./projects";
+export type { Project } from "./projects";
 
 /* ---------- Blog ---------- */
 export type Post = { slug: string; category: string; title: string; excerpt: string; read: string; date: string; hue: number; body: string[] };
@@ -251,6 +149,9 @@ export const faqs = [
   { q: "How does an engagement start?", a: "Reach out with a short description of what you need. We schedule a discovery conversation, then follow our four steps: Discover, Plan & Design, Develop and Deliver." },
   { q: "How do you deliver projects?", a: "Work is planned up front and delivered iteratively, with regular demos so you can see progress and give feedback. Launch includes monitoring and a clear handover." },
   { q: "Can you work with our existing Microsoft 365, Entra ID or AWS environment?", a: "Yes. Most of our work happens inside existing tenants and accounts. We start with an audit, agree what to change, and document everything we touch." },
+  { q: "How accurate is the cost estimator?", a: "The estimator gives an indicative range based on project type, complexity, add-ons and timeline. It is a starting point for a conversation, not a quote. We confirm a fixed scope and price after a short discovery call." },
+  { q: "Can I book a consultation before committing?", a: "Yes. Use the Book a consultation tab to pick a preferred date and time window. A team member will confirm the slot with you." },
+  { q: "How is my project information handled?", a: "Details you send through our forms are used only to respond to your enquiry. Please avoid including passwords, API keys or other secrets in a message; we will never ask for them in a form." },
   { q: "Where is the team based?", a: "We are fully remote, so we can collaborate across time zones and work with your tools and processes." },
 ];
 
