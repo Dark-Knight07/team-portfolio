@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { faqs } from "@/lib/content";
+import { team } from "@/lib/team";
 import { site, contactHref } from "@/lib/site";
 import { ServiceArt } from "./ServiceArt";
 import { LogoMark } from "./Logo";
@@ -51,6 +52,15 @@ export function Cta() {
           </a>
         </div>
         {site.email && <p className="reveal mono text-[12px] text-ink-3 tracking-[0.06em] mt-8">{site.email}</p>}
+        <div className="reveal mt-14 mx-auto max-w-[920px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
+          {team.filter((m) => m.phone).map((m) => (
+            <a key={m.slug} href={`tel:${m.phone}`} className="group rounded-[var(--radius-sm)] border border-line-2 bg-bg-2/70 backdrop-blur-sm px-4 py-3.5 hover:border-line-3 hover:bg-bg-3 transition-colors">
+              <div className="text-[14px] font-medium tracking-[-0.005em]">{m.name}</div>
+              <div className="text-[12px] text-ink-3 mb-2">{m.title}</div>
+              <div className="mono text-[12px] text-accent tracking-[0.04em]">{m.phone}</div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -95,7 +105,7 @@ export function Footer() {
           </div>
         </div>
         <div className="overflow-hidden my-10">
-          <div className="leading-[0.85] font-medium select-none whitespace-nowrap overflow-hidden" style={{ fontSize: "clamp(80px, 18vw, 260px)", letterSpacing: "-0.05em", color: "transparent", WebkitTextStroke: "1px var(--line-2)" }}>
+          <div className="leading-[0.85] font-medium select-none whitespace-nowrap overflow-hidden" style={{ fontSize: "clamp(52px, 17vw, 260px)", letterSpacing: "-0.05em", color: "transparent", WebkitTextStroke: "1px var(--line-2)" }}>
             {site.name}
             <span className="serif" style={{ color: "var(--accent)", WebkitTextStroke: 0 }}>·</span>
           </div>
