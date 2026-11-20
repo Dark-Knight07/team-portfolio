@@ -38,15 +38,12 @@ npm run dev -- -p 3100         # http://localhost:3100
 │   ├── team.ts          Team members
 │   └── content.ts       Services, projects, blog posts, FAQ
 ├── public/              Static assets (team photos in public/team)
-├── docs/                Team documentation (start with GITHUB_WORKFLOW.md)
-├── scripts/             Admin scripts (GitHub setup)
 └── .github/             PR/issue templates, CODEOWNERS, Actions workflows
 ```
 
 ## Contributing
 
-All work goes through Pull Requests into `develop`. Read
-[`docs/GITHUB_WORKFLOW.md`](docs/GITHUB_WORKFLOW.md) and
+Work on a branch and open a Pull Request into `main`. Read
 [`CONTRIBUTING.md`](CONTRIBUTING.md) before your first change.
 
 ## License

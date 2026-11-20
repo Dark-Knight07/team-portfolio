@@ -1,6 +1,6 @@
 # Contributing to TetraNex projects
 
-The full beginner guide is in [`docs/GITHUB_WORKFLOW.md`](docs/GITHUB_WORKFLOW.md).
+Keep changes small, use a branch and open a Pull Request.
 This page is the short checklist.
 
 ## Rules
