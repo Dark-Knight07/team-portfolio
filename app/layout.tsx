@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } } : {}),
   openGraph: { title: `${site.legalName} — ${site.tagline}`, description: site.description, type: "website", siteName: site.legalName },
-  twitter: { card: "summary_large_image", title: site.name, description: site.description },
+  twitter: { card: "summary_large_image", title: `${site.legalName} — ${site.tagline}`, description: site.description },
 };
 
 const jsonLd = {
