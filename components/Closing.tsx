@@ -62,7 +62,7 @@ export function Footer() {
   const cols = [
     { h: "Team", links: [["Work", "/#portfolio"], ["Services", "/#services"], ["Process", "/#process"], ["Technology", "/#technology"], ["Team", "/#team"], ["Blog", "/blog"]] },
     { h: "Expertise", links: [["Cloud & AWS", "/#services"], ["Identity & Access", "/#services"], ["Microsoft 365", "/#services"], ["AI & Automation", "/#services"]] },
-    { h: "Company", links: [["Contact", startHref], ["FAQ", "/#faq"], ["Privacy", "/privacy"], ...site.socials.map((s) => [s.label, s.href])] },
+    { h: "Company", links: [["Contact", startHref], ["FAQ", "/#faq"], ["Privacy", "/privacy"], ["Terms", "/terms"],...site.socials.map((s) => [s.label, s.href])] },
   ];
   return (
     <footer className="border-t border-line pt-20 pb-10 relative overflow-hidden">
